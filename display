@@ -24,3 +24,8 @@ if [[ $* == *hdmi* ]]
 then
     xrandr --output $primary --primary --auto --off --output $secondary --auto
 fi
+
+if [[ $* == *mirror* ]]
+then
+    xrandr --output $primary --primary --auto --output $secondary --auto --same-as $primary
+fi
