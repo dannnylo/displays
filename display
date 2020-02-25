@@ -1,0 +1,26 @@
+#!/bin/bash
+
+primary=$(xrandr | awk '/ connected primary/{print $1}')
+secondary=$(xrandr | awk '/ connected primary/{next}/ connected/{print $1;exit}')
+disconnected=$(xrandr | awk '/ disconnected [0-9]+x[0-9]+/{print $1}')
+
+# Clear disconnected
+for display in $disconnected
+do
+    xrandr --output $display --off
+done
+
+if [[ $* == *both* ]]
+then
+    xrandr --output $primary --primary --auto --output $secondary --auto --right-of $primary
+fi
+
+if [[ $* == *notebook* ]]
+then
+    xrandr --output $primary --primary --auto --output $secondary --auto --off
+fi
+
+if [[ $* == *hdmi* ]]
+then
+    xrandr --output $primary --primary --auto --off --output $secondary --auto
+fi
