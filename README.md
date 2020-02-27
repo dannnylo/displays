@@ -5,6 +5,7 @@
  - `display notebook`: Enables only notebook display
  - `display hdmi`: Enables only hdmi display
  - `display both`: Enables notebook and hdmi displays
+ - `display mirror`: Enables notebook and hdmi displays and mirrors them.
 
  ## How to install
 
