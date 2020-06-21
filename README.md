@@ -1,23 +1,23 @@
-# CLI display manager
+# CLI displays manager
 
 ## How to use
 
- - `display notebook`: Enables only notebook display
- - `display hdmi`: Enables only hdmi display
- - `display both`: Enables notebook and hdmi displays
- - `display mirror`: Enables notebook and hdmi displays and mirrors them.
+ - `displays notebook`: Enables only notebook displays
+ - `displays hdmi`: Enables only hdmi displays
+ - `displays both`: Enables notebook and hdmi displayss
+ - `displays mirror`: Enables notebook and hdmi displayss and mirrors them.
 
  ## How to install
 
  ```sh
- curl -L https://raw.githubusercontent.com/dannnylo/display/master/display -o /usr/local/bin/display
- chmod +x /usr/local/bin/display
+ curl -L https://raw.githubusercontent.com/dannnylo/displays/master/displays -o /usr/local/bin/displays
+ chmod +x /usr/local/bin/displays
  ```
 
 If you need sudo:
 
  ```sh
- sudo curl -L https://raw.githubusercontent.com/dannnylo/display/master/display -o /usr/local/bin/display
- sudo chown $USER /usr/local/bin/display
- chmod +x /usr/local/bin/display
+ sudo curl -L https://raw.githubusercontent.com/dannnylo/displays/master/displays -o /usr/local/bin/displays
+ sudo chown $USER /usr/local/bin/displays
+ chmod +x /usr/local/bin/displays
  ```
